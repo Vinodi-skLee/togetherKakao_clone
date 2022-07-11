@@ -3,6 +3,7 @@
 ### 📌 Introduction
 프로젝트명: 카카오 같이가치 사이트 클론 코딩 </br>
 프로젝트 기간: 22.07.04 - 22.07.29 </br>
+프로젝트 링크: http://vinodi.dothome.co.kr/ </br>
 참고링크: https://together.kakao.com/
 
 <img src="https://user-images.githubusercontent.com/83273272/177493822-4aa84076-2fe0-443d-809f-1e71dfbbf159.png"/>
