@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+    src: url('../fonts/KakaoRegular.ttf'),
+}
+
+body, button, input, select, textarea {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+    color: #444;
+    -webkit-text-size-adjust: none;
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    background-color: initial;
+    cursor: pointer;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    @if $enable-button-pointers {
+        &:not(:disabled) {
+            cursor: pointer;
+        }
+    }
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* header */
+.header_container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;  
+}
+#akHead {
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+}
+.logo_head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.link_head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 0 auto;
+    position: relative;
+    height: 100%;
+    padding-left: 224px;
+    text-align: center;
+    font-weight: bold;
+}
+.link_head .link_heads {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    border-bottom: 2px solid #0000;
+    margin: 0 11px;
+    padding: 22px 14px;
+    font-size: 16px;
+    font-family: KakaoBig Bold, sans-serif;
+    color: #444;
+    text-decoration: none;
+}
+
+.link_head .link_heads .txt_heads {
+    position: relative;
+}
+
+.logo_head .util_head {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.util_head .util_heads{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    margin: 0 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.3px;
+    color: #202020;
+    background-color: #fff;
+    text-decoration: none;
+}
+.util_head .login_heads {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    margin: 0 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.3px;
+    color: #202020;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.util_head .btn_search  {
+    height: auto;
+    margin-left: 5px;
+    padding: 6px;
+}
+/* header */
+
+/* content */
+#akContent {
+    position: relative;
+    margin: 0 0 -212px;
+    flex-grow: 1;
+    min-height: calc(100vh - (70px + 250px));
+}
+
+#akContent .con_home {
+    background-color: #fff;
+}
+
+.con_home #mainContent {
+    padding-bottom: 210px;
+    padding: 0 0 250px;
+}
+
+.topslide_container {
+    padding-top: 60px;    
+}
+
+.inner_slide {
+    overflow: hidden;
+    position: relative;
+    width: 1000px;
+    height: 303px;
+    margin: 0 auto;
+
+}
+
+.list_slide {
+    overflow: hidden;
+    position: relative;
+    width: 1040px;
+    height: 100%;
+    margin: 0 -20px;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul, li{
+    list-style: none;
+}
+
+
+.slide_pannel {
+    left: 0;
+    top: 0;
+    padding: 0 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+
+.topslide_container .link_slide .area_cont {
+    width: 500px;
+}
+.tag_slide {
+    display: block;
+    padding-left: 2px;
+    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+    line-height: 20px;
+}
+
+.tit_slide {
+    max-height: 64px;
+    padding-top: 6px;
+    font-size: 32px;
+    line-height: 44px;
+    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+}
+.ellipsis_type1 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.area_thumb {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 492px;
+    height: 280px;
+    border-radius: 15px;
+}
+
+.img_thumb  {
+    display: block;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.topslide_container .slide_pannel .link_slide {
+    display: block;
+    position: relative;
+    height: 303px;
+}
+
+a:active,
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: #444;
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.paging_slide {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    z-index: 10;
+}
+
+.paging_num {
+    display: inline-block;
+    overflow: hidden;
+    padding: 4px 0;
+}
+
+.num_page  {
+    display: block;
+    float: left;
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    background: #0000001a;
+    text-indent: -9999px;
+}
+.screen_out {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* content */

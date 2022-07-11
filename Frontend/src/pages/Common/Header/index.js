@@ -1,41 +1,49 @@
 import React from 'react';
-// import headerImg from '../../../asset/img/csee-logo-symbol.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
+import '../../asset/css/app.css';
 // import { GoogleLogout } from 'react-google-login';
 
-export default function Header(props) {
+export default function Header() {
   // const onLogout = () => {
   //   window.sessionStorage.removeItem('user_id');
   // };
 
   return (
-    <>
-      <Navbar
-        bg="white"
-        variant="light"
-        style={{
-          borderBottom: '1px solid #eee',
-          height: '70px',
-          fontSize: '14px',
-          lineHeight: '1.5',
-          fontFamily: 'KakaoBig Regular,Malgun Gothic,맑은 고딕,Apple SD Gothic Neo,dotum,돋움,sans-serif',
-          color: '#444',
-        }}
-      >
-        <Container>
-          <Navbar.Brand href="/">카카오같이가치</Navbar.Brand>
-          <Nav className="me-auto" style={{ fontWeight: 'bold' }}>
-            <Nav.Link href="#home">같이기부</Nav.Link>
-            <Nav.Link href="#features">모두의행동</Nav.Link>
-            <Nav.Link href="#pricing">마음날씨</Nav.Link>
-            <Nav.Link href="#pricing">더보기</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
+    <div className="header_container">
+      <div id="akHead" bg="white" variant="light">
+        <div className="logo_head">
+          <a href="/">
+            <img src="//t1.kakaocdn.net/together_image/svg/logo_pc.svg" />
+          </a>
+          <div role="navigaion" className="link_head">
+            <a className="link_heads" href="#home">
+              <span class="txt_heads">같이기부</span>
+            </a>
+            <a className="link_heads" href="#home">
+              <span class="txt_heads">모두의행동</span>
+            </a>
+            <a className="link_heads" href="#home">
+              <span class="txt_heads">마음날씨</span>
+            </a>
+            <a className="link_heads" href="#home">
+              <span class="txt_heads">더보기</span>
+            </a>
+          </div>
+          <div className="util_head">
+            <a className="util_heads" hred="/">
+              제안하기
+            </a>
+            <a className="login_heads" hred="/">
+              로그인
+            </a>
+            <button type="button" routerlink="/search" id="btnSearch" className="btn_search" tabindex="0">
+              <span class="ico_together ico_search">검색</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     //   <Navbar bg="light">
     //     <Container>
     //       <Navbar.Brand href="/">{/* <img alt="" src={headerImg} width="30" height="30" className="d-inline-block align-center" /> */} 카카오같이가치</Navbar.Brand>
