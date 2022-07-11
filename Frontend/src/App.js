@@ -1,7 +1,7 @@
-import React from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import React from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import Main from "./pages/Main";
+import Main from './pages/Main';
 // import Login from "./pages/Login";
 // import LoginGoogle from "./pages/Login/Googlebutton";
 // import Admin from "./pages/Admin";
@@ -9,18 +9,18 @@ import Main from "./pages/Main";
 // import AdminRegister from "./pages/Register/Admin";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Main />} />
-                {/* <Route exact path="/login" element={<Login />} />
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        {/* <Route exact path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/adminregister" element={<AdminRegister />} />
                 <Route path="/google-login" element={<LoginGoogle />} /> */}
-            </Routes>
-        </BrowserRouter>
-    );
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
