@@ -1,12 +1,16 @@
 @font-face {
-    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+    font-family: 'KakaoBigRegular';
     src: url('../fonts/KakaoRegular.ttf'),
+}
+@font-face {
+    font-family: 'KakaoBigBold';
+    src: url('../fonts/KakaoBold.ttf');
 }
 
 body, button, input, select, textarea {
     font-size: 14px;
     line-height: 1.5;
-    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+    font-family: 'KakaoBigRegular';
     color: #444;
     -webkit-text-size-adjust: none;
 }
@@ -86,7 +90,7 @@ div {
     margin: 0 11px;
     padding: 22px 14px;
     font-size: 16px;
-    font-family: KakaoBig Bold, sans-serif;
+    font-family: 'KakaoBigBold';
     color: #444;
     text-decoration: none;
 }
@@ -95,13 +99,13 @@ div {
     position: relative;
 }
 
-.logo_head .util_head {
+.logo_head .util_head, .fund_readmore {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.util_head .util_heads{
+.util_head .util_heads, .fund_readmore_icon{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -158,12 +162,12 @@ div {
 }
 
 .con_home #mainContent {
-    padding-bottom: 210px;
-    padding: 0 0 250px;
+    padding: 0 0 95px;
 }
 
 .topslide_container {
-    padding-top: 60px;    
+    padding-top: 60px;   
+    bottom: 0; 
 }
 
 .inner_slide {
@@ -176,6 +180,8 @@ div {
 }
 
 .list_slide {
+    display: flex;
+    transform: translate(0, 0);
     overflow: hidden;
     position: relative;
     width: 1040px;
@@ -204,6 +210,12 @@ ul, li{
     list-style: none;
 }
 
+button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+}
 
 .slide_pannel {
     left: 0;
@@ -211,17 +223,29 @@ ul, li{
     padding: 0 20px;
     background-color: #fff;
     box-sizing: border-box;
+    flex: 0 0 100%;
+    list-style: none;
 }
 
+.img_slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
 
 .topslide_container .link_slide .area_cont {
     width: 500px;
 }
+
 .tag_slide {
     display: block;
     padding-left: 2px;
-    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+    font-family: 'KakaoBigBold';
     line-height: 20px;
+    text-decoration: none;
 }
 
 .tit_slide {
@@ -229,8 +253,10 @@ ul, li{
     padding-top: 6px;
     font-size: 32px;
     line-height: 44px;
-    font-family: 'KakaoBig Regular, Malgun Gothic, 맑은 고딕, Apple SD Gothic Neo, dotum, 돋움, sans-serif';
+    font-family: 'KakaoBigBold';
+    text-decoration: none;
 }
+
 .ellipsis_type1 {
     display: block;
     overflow: hidden;
@@ -259,6 +285,7 @@ ul, li{
     display: block;
     position: relative;
     height: 303px;
+    text-decoration: none;
 }
 
 a:active,
@@ -266,51 +293,396 @@ a:hover {
     text-decoration: none;
 }
 
+span {
+    color: rgb(0, 0, 0);
+}
+
 a {
-    color: #444;
+    color: rgb(0, 0, 0);
     cursor: pointer;
+    overflow: hidden;
 }
 
 a:-webkit-any-link {
-    color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-.paging_slide {
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    z-index: 10;
+.paginations {
+    padding-top: 1rem;
+    text-align: center;
 }
 
-.paging_num {
-    display: inline-block;
-    overflow: hidden;
-    padding: 4px 0;
-}
-
-.num_page  {
-    display: block;
-    float: left;
-    position: relative;
-    width: 8px;
-    height: 8px;
-    margin: 0 4px;
+.pagination {
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 50%;
+}
+
+.pagination:not(:last-child) {
+    margin-right: 0.3rem;
+}
+
+.pagination.on {
+    background: #333;
+}
+
+.act_banner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 55px 0;
+    background: #f6f1ff;
+}
+
+.act_container {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.left_banner_container {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.tit_banner {
+    display: block;
+    overflow: hidden;
     font-size: 0;
     line-height: 0;
-    background: #0000001a;
     text-indent: -9999px;
-}
-.screen_out {
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    text-indent: -9999px;
+    width: 378px;
+    height: 180px;
+    background: url(//t1.kakaocdn.net/together_image/common/ico_actions.png)no-repeat 0 -22px/180px 170px;
 }
 
+.detail_banner {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #9282ae;
+    border-radius: 40px;
+    text-align: center;
+    font-family: 'KakaoBigBold';
+    cursor: pointer;
+}
+
+
+.right_banner {
+    display: relative;
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.right_banner_top {
+    display: block;
+    width: 100%;
+    border-radius: 15px 15px 0  0 ;
+    padding: 10px;
+    background-color: #a95ff3;
+    color: #fff;
+    text-align: center;
+}
+
+.right_banner_bottom {
+    display: flex;
+    padding: 30px;
+}
+
+.img_area {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    width: 220px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.text_area {
+    padding: 20px 20px 20px 30px;
+    
+}
+
+.tag_banner {
+    display: block;
+    padding-left: 25px;
+    font-family: 'KakaoBigBold';
+    font-size: 13px;
+    line-height: 20px;
+    color: #a95ff3;;
+    background: url(//t1.kakaocdn.net/together_image/svg/ico_checks.svg) no-repeat 0 3px/14px;
+}
+
+.tit_banner2  {
+    display: block;
+    max-height: 64px;
+    font-size: 18px;
+    line-height: 44px;
+    font-family: 'KakaoBigRegular';
+    font-weight: bold;
+}
+
+.desc_banner {
+    display: block;
+    line-height: 20px;
+    font-size: 13px;
+    font-family: 'KakaoBigRegular';
+}
+
+.fund_container {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 39px;
+
+}
+
+.tit_banner3 {
+    display: block;
+    max-height: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-family: 'KakaoBigRegular';
+    font-weight: bold;
+}
+
+.fund_list {
+    display: block;
+    padding-left: 0;
+    overflow: hidden;
+}
+
+.fund_list li {
+    float: left;
+    position: relative;
+    width: 230px;
+    margin: 15px 0 0 18px;
+}
+
+.find_img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 134px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fund_list_text {
+    padding-top: 10px;    
+}
+
+.list_title {
+    display: -webkit-box;
+    max-height: 50px;
+    font-size: 15px;
+    line-height: 23px;
+    color: black;
+    font-family: 'KakaoBigRegular';
+}
+
+.list_propo {
+    display: block;
+    overflow: hidden;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.fund_list_gage {
+    float: left;
+    position: relative;
+    width: 46.612%;
+    height: 2px;
+    margin-top: 24px;
+}
+
+.state_bar {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ebebeb;
+}
+
+.state_gage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.state_ing {
+    background-color: #e35396;
+}
+
+.price_goal {
+    overflow: hidden;
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 18px;
+    display: block;
+    color: #444;
+    font-family: 'KakaoBigBold';
+    text-align: right;
+}
+
+.fund_readmore {
+    display: block;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.img_banner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 280px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 55px 0;
+    background: url('../img/12.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.img_container {
+    width: 1400px;
+    margin: 0 auto;
+    padding-left: 220px;
+}
+
+.img_left_container {
+    flex-shrink: 0;
+    width: 450px;
+}
+
+.img_banner_tag  {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.img_banner_tit {
+    display: block;
+    max-height: 64px;
+    font-size: 20px;
+    line-height: 44px;
+    font-family: 'KakaoBigRegular';
+    font-weight: bold;
+}
+
+.img_banner_dec {
+    display: block;
+    font-size: 12px;
+}
+
+.story_container {
+    margin: 50px auto -23px;
+}
+
+.story_banner  {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.story_banner_img {
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.ani_container  {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 317px;
+    border-bottom: 1px solid #fff;
+    background: url(//t1.kakaocdn.net/together_image/common/bg_fund_graph.png) repeat-x 0 0;
+    background-size: auto 200px;
+}
 /* content */
+
+
+/* footer */
+#akFoot  {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    padding: 46px 0 88px;
+    background-color: #202020;
+}
+
+.inner_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.link_home {
+    position: absolute;
+    left: 0;
+    width: 114px;
+    height: 18px;
+    background: url(//t1.kakaocdn.net/together_image/svg/footer_logo_pc.svg) no-repeat 50%/contain;
+}
+
+.info_footer {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.util_foot  {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 94px;
+    height: 40px;
+    border: 1px solid #666;
+    border-radius: 20px;
+    margin-left: 20px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -.1px;
+    color: #999;
+    text-decoration: none;
+}
+
+.util_foot_desc {
+    font-size: 14px;
+    line-height: 1.57;
+    color: #999;
+    text-align: right;
+}
+/* footer */
