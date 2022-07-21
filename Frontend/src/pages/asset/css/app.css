@@ -686,3 +686,55 @@ a:-webkit-any-link {
     text-align: right;
 }
 /* footer */
+
+/* footer */
+
+/* login */
+#akLogin {
+    display: block;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #fff;
+}
+
+#login_banner  {
+    position: relative;
+    padding: 3%;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.login_container {
+    max-width: 100%;
+    min-height: 545px;
+    padding: 3%;
+}
+
+.loginForm_left  {
+    display: inline-block;
+    position: relative;
+    width: 500px;
+    margin: 0 8% 0 10%;
+    vertical-align: top;
+}
+
+.loginForm_right {
+    display: inline-block;
+    padding: 60px;
+    width: 100%;
+    max-width: 450px;
+    height: 550px;
+    box-sizing: border-box;
+}
+
+.loginForm_right_tit {
+    font-family: 'KakaoBigBold';
+    font-size: 30px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.googlebtn  {
+    font-family: 'KakaoBigRegular';
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../asset/css/app.css';
 // import { GoogleLogout } from 'react-google-login';
@@ -12,30 +13,30 @@ export default function Header() {
     <div className="header_container">
       <div id="akHead" bg="white" variant="light">
         <div className="logo_head">
-          <a href="/">
+          <Link to="/">
             <img src="//t1.kakaocdn.net/together_image/svg/logo_pc.svg" />
-          </a>
+          </Link>
           <div role="navigaion" className="link_head">
-            <a className="link_heads" href="#home">
+            <Link className="link_heads" to="#home">
               <span class="txt_heads">같이기부</span>
-            </a>
-            <a className="link_heads" href="#home">
+            </Link>
+            <Link className="link_heads" to="#home">
               <span class="txt_heads">모두의행동</span>
-            </a>
-            <a className="link_heads" href="#home">
+            </Link>
+            <Link className="link_heads" to="#home">
               <span class="txt_heads">마음날씨</span>
-            </a>
-            <a className="link_heads" href="#home">
+            </Link>
+            <Link className="link_heads" to="#home">
               <span class="txt_heads">더보기</span>
-            </a>
+            </Link>
           </div>
           <div className="util_head">
-            <a className="util_heads" hred="/">
+            <Link className="util_heads" to="/">
               제안하기
-            </a>
-            <a className="login_heads" hred="/">
+            </Link>
+            <Link className="login_heads" to="/Login">
               로그인
-            </a>
+            </Link>
             <button type="button" routerlink="/search" id="btnSearch" className="btn_search" tabindex="0">
               <span class="ico_together ico_search">검색</span>
             </button>
