@@ -1,6 +1,7 @@
 ## Clone coding: 같이가치
 
 ### 📌 Introduction
+
 프로젝트명: 카카오 같이가치 사이트 클론 코딩 </br>
 프로젝트 기간: 22.07.04 - 22.07.29 </br>
 프로젝트 링크: http://vinodi.dothome.co.kr/ </br>
@@ -12,15 +13,14 @@
 
 </br>
 
-###  💡 Made by 
+### 💡 Made by
 
 | <img src="https://github.com/skLee-HGU.png" width="300" height="270"/> |
 | :-----------------------------------: |
 |            **Sunkyung Lee**           |
 
 </br>
-                                             
-                                                                    
+
 ### 🛠 Tech Stack
 
 | division        | stack                                                                                                                                                                                                                                                                                                       |

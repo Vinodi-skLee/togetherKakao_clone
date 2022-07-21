@@ -1,6 +1,6 @@
 // import React from 'react';
-import React, { useState, useEffect } from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {Route, Routes, BrowserRouter} from 'react-router-dom';
 
 import Main from './pages/Main';
 import Login from './pages/Login';
@@ -24,28 +24,28 @@ import Login from './pages/Login';
 // export default App;
 
 function App() {
-  const [message, setMessage] = useState([]);
-  useEffect(() => {
-    fetch('/hello')
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setMessage(data);
-      });
-  }, []);
-  return (
-    <div className="App">
-      <header className="App-header">
-        // 기본코드
-        <ul>
-          {message.map((v, idx) => (
-            <li key={`${idx}-${v}`}>{v}</li>
-          ))}
-        </ul>
-      </header>
-    </div>
-  );
+    const [message, setMessage] = useState([]);
+    useEffect(() => {
+        fetch('/hello')
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                setMessage(data);
+            });
+    }, []);
+    return (
+        <div className="App">
+            <header className="App-header">
+                // 기본코드
+                <ul>
+                    {message.map((v, idx) => (
+                        <li key={`${idx}-${v}`}>{v}</li>
+                    ))}
+                </ul>
+            </header>
+        </div>
+    );
 }
 
 export default App;

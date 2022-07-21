@@ -2,6 +2,7 @@
     font-family: 'KakaoBigRegular';
     src: url('../fonts/KakaoRegular.ttf'),
 }
+
 @font-face {
     font-family: 'KakaoBigBold';
     src: url('../fonts/KakaoBold.ttf');
@@ -27,11 +28,12 @@ button,
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
-    @if $enable-button-pointers {
-        &:not(:disabled) {
-            cursor: pointer;
-        }
-    }
+
+@if $enable-button-pointers {
+&:not(:disabled) {
+    cursor: pointer;
+}
+}
 }
 
 div {
@@ -46,8 +48,9 @@ div {
     padding-right: var(--bs-gutter-x, .75rem);
     padding-left: var(--bs-gutter-x, .75rem);
     margin-right: auto;
-    margin-left: auto;  
+    margin-left: auto;
 }
+
 #akHead {
     left: 0;
     right: 0;
@@ -58,6 +61,7 @@ div {
     height: 70px;
     background-color: #fff;
 }
+
 .logo_head {
     position: relative;
     display: flex;
@@ -80,6 +84,7 @@ div {
     text-align: center;
     font-weight: bold;
 }
+
 .link_head .link_heads {
     display: inline-flex;
     justify-content: center;
@@ -105,7 +110,7 @@ div {
     align-items: center;
 }
 
-.util_head .util_heads, .fund_readmore_icon{
+.util_head .util_heads, .fund_readmore_icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -123,6 +128,7 @@ div {
     background-color: #fff;
     text-decoration: none;
 }
+
 .util_head .login_heads {
     display: inline-flex;
     justify-content: center;
@@ -142,11 +148,12 @@ div {
     text-decoration: none;
 }
 
-.util_head .btn_search  {
+.util_head .btn_search {
     height: auto;
     margin-left: 5px;
     padding: 6px;
 }
+
 /* header */
 
 /* content */
@@ -166,8 +173,8 @@ div {
 }
 
 .topslide_container {
-    padding-top: 60px;   
-    bottom: 0; 
+    padding-top: 60px;
+    bottom: 0;
 }
 
 .inner_slide {
@@ -206,7 +213,7 @@ li {
     text-align: -webkit-match-parent;
 }
 
-ul, li{
+ul, li {
     list-style: none;
 }
 
@@ -275,7 +282,7 @@ button {
     border-radius: 15px;
 }
 
-.img_thumb  {
+.img_thumb {
     display: block;
     width: 100%;
     border-radius: 15px 15px 0 0;
@@ -359,7 +366,7 @@ a:-webkit-any-link {
     text-indent: -9999px;
     width: 378px;
     height: 180px;
-    background: url(//t1.kakaocdn.net/together_image/common/ico_actions.png)no-repeat 0 -22px/180px 170px;
+    background: url(//t1.kakaocdn.net/together_image/common/ico_actions.png) no-repeat 0 -22px/180px 170px;
 }
 
 .detail_banner {
@@ -388,7 +395,7 @@ a:-webkit-any-link {
 .right_banner_top {
     display: block;
     width: 100%;
-    border-radius: 15px 15px 0  0 ;
+    border-radius: 15px 15px 0 0;
     padding: 10px;
     background-color: #a95ff3;
     color: #fff;
@@ -413,7 +420,7 @@ a:-webkit-any-link {
 
 .text_area {
     padding: 20px 20px 20px 30px;
-    
+
 }
 
 .tag_banner {
@@ -426,7 +433,7 @@ a:-webkit-any-link {
     background: url(//t1.kakaocdn.net/together_image/svg/ico_checks.svg) no-repeat 0 3px/14px;
 }
 
-.tit_banner2  {
+.tit_banner2 {
     display: block;
     max-height: 64px;
     font-size: 18px;
@@ -482,7 +489,7 @@ a:-webkit-any-link {
 }
 
 .fund_list_text {
-    padding-top: 10px;    
+    padding-top: 10px;
 }
 
 .list_title {
@@ -576,7 +583,7 @@ a:-webkit-any-link {
     width: 450px;
 }
 
-.img_banner_tag  {
+.img_banner_tag {
     display: block;
     font-size: 15px;
     font-weight: bold;
@@ -600,7 +607,7 @@ a:-webkit-any-link {
     margin: 50px auto -23px;
 }
 
-.story_banner  {
+.story_banner {
     display: block;
     overflow: hidden;
     text-align: center;
@@ -612,7 +619,8 @@ a:-webkit-any-link {
     margin: 0 auto;
     border-radius: 20px;
 }
-.ani_container  {
+
+.ani_container {
     position: relative;
     left: 0;
     bottom: 0;
@@ -622,11 +630,12 @@ a:-webkit-any-link {
     background: url(//t1.kakaocdn.net/together_image/common/bg_fund_graph.png) repeat-x 0 0;
     background-size: auto 200px;
 }
+
 /* content */
 
 
 /* footer */
-#akFoot  {
+#akFoot {
     position: relative;
     box-sizing: border-box;
     width: 100%;
@@ -661,7 +670,7 @@ a:-webkit-any-link {
     align-items: center;
 }
 
-.util_foot  {
+.util_foot {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -685,6 +694,7 @@ a:-webkit-any-link {
     color: #999;
     text-align: right;
 }
+
 /* footer */
 
 /* footer */
@@ -697,7 +707,7 @@ a:-webkit-any-link {
     background-color: #fff;
 }
 
-#login_banner  {
+#login_banner {
     position: relative;
     padding: 3%;
     height: 100%;
@@ -711,7 +721,7 @@ a:-webkit-any-link {
     padding: 3%;
 }
 
-.loginForm_left  {
+.loginForm_left {
     display: inline-block;
     position: relative;
     width: 500px;
@@ -735,6 +745,6 @@ a:-webkit-any-link {
     margin-bottom: 30px;
 }
 
-.googlebtn  {
+.googlebtn {
     font-family: 'KakaoBigRegular';
 }
