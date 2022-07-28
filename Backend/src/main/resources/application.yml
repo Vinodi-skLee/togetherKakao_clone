@@ -1,0 +1,26 @@
+#spring:
+#  datasource:
+#    url: jdbc:Mysql://walab.handong.edu:3306/camp1/lsk_user
+#    username: camp1
+#    password: 6naYhKTawFFMpYe2
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sk
+    password: sk
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace

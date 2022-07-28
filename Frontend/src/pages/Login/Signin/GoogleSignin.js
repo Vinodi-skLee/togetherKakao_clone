@@ -10,7 +10,7 @@ export default function GoogleSignin() {
   useEffect(() => {
     function start() {
       gapi.client.init({
-        clientId: process.env.REACT_APP_GOOGLE_ID,
+        clientId: '104877046635-0r2jsm2n7qogfkf90nh9g39tv2o5eb6v.apps.googleusercontent.com',
         scope: 'email',
       });
     }
@@ -24,6 +24,7 @@ export default function GoogleSignin() {
     params.append('idToken', res.tokenObj.id_token);
     sessionStorage.setItem('accessToken', res.tokenObj.access_token);
     sessionStorage.setItem('name', res.profileObj.name);
+    sessionStorage.setItem('email', res.profileObj.email);
     navigate('/', {
       //   state: { email: userEmail },
     });
@@ -44,7 +45,12 @@ export default function GoogleSignin() {
   };
   return (
     <>
-      <GoogleLogin clientId={process.env.REACT_APP_GOOGLE_ID} buttonText="Google 계정으로 로그인" onSuccess={onSuccess} onFailure={onFailure} />
+      <GoogleLogin
+        clientId="104877046635-0r2jsm2n7qogfkf90nh9g39tv2o5eb6v.apps.googleusercontent.com"
+        buttonText="Google 계정으로 로그인"
+        onSuccess={onSuccess}
+        onFailure={onFailure}
+      />
     </>
   );
 }

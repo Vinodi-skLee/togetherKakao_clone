@@ -7,6 +7,7 @@ export default function Header() {
   const onLogout = () => {
     sessionStorage.removeItem('accessToken');
     sessionStorage.removeItem('name');
+    sessionStorage.removeItem('email');
     window.history.push('/');
   };
 
